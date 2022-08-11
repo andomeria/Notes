@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.NoteEntryPage"
+             Title="New Note">
+    <ContentPage.Resources>
+        <!-- Implicit styles -->
+        <Style TargetType="{x:Type Editor}">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppBackgroundColor}" />
+        </Style>
+    </ContentPage.Resources>
+
+    <!-- Defining layout of the editor box -->
+    <StackLayout Margin="{StaticResource PageMargin}">
+        <Editor Text="{Binding Text}"
+                HeightRequest="520"
+                TextColor="Black"
+                IsSpellCheckEnabled="False"
+                IsTextPredictionEnabled="False"/>
+
+        <!-- defining layout of the save and delete buttons -->
+        <Grid ColumnDefinitions="*,*">
+            <Button Text="Save"
+                    Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1"
+                    Text="Delete"
+                    Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

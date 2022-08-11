@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.Views.AboutPage"
+             Title="About">
+    <!-- defines the layout in two rows -->
+    <Grid RowDefinitions="Auto,*">
+        <!-- defines the look of the image and inserts it-->
+        <Image Source="Banner.jpg"
+               BackgroundColor="{StaticResource AppPrimaryColor}"
+               Opacity="1"
+               VerticalOptions="Center"
+               HeightRequest="64" />
+            <!-- Defines the layout of the about sections textpart -->
+        <StackLayout Grid.Row="1"
+                     Margin="20"
+                     Spacing="20">
+            <Label FontSize="22">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Simple Note"
+                                  TextColor="#2F4858"
+                                  FontAttributes="Bold"
+                                  FontSize="22" />
+                            <Span Text=" v1.0"
+                                  TextColor="#2F4858"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="We are pleased to welcome you on our platform, we exist to help you take notes, and make that task a lot easier, so you at all times can have it at your hand. "
+                   TextColor="#2F4858"/>
+            <Button Text="Learn more"
+                    Clicked="OnButtonClicked" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

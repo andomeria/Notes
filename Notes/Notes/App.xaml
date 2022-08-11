@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.App">
+
+    <!-- Resources used by multiple pages in the application -->
+    <Application.Resources>
+
+        <Thickness x:Key="PageMargin">15</Thickness>
+
+        <!-- Colors -->
+        <Color x:Key="AppPrimaryColor">#94C5CC</Color>
+        <Color x:Key="AppBackgroundColor">#F8F8F8</Color>
+        <Color x:Key="PrimaryColor">Black</Color>
+        <Color x:Key="SecondaryColor">#2F4858</Color>
+        <Color x:Key="TertiaryColor">#2F4858</Color>
+
+        <!-- defines the look of the buttons on the entrypage-->
+        <Style TargetType="Button">
+            <Setter Property="FontSize"
+                    Value="Medium" />
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppPrimaryColor}" />
+            <Setter Property="TextColor"
+                    Value="{StaticResource SecondaryColor}" />
+            <Setter Property="CornerRadius"
+                    Value="12" />
+        </Style>
+
+    </Application.Resources>
+</Application>
